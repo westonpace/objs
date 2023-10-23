@@ -1,0 +1,18 @@
+[package]
+name = "objs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Weston Pace <weston.pace@gmail.com>"]
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.4.6", features = ["derive"] }
+futures = "0.3.28"
+object_store = { version = "0.7.1", features = ["aws"] }
+path-clean = "1.0.1"
+shellexpand = "3.1.0"
+thiserror = "1.0.50"
+tokio = { version = "1.33.0", features = ["fs", "rt-multi-thread", "macros"] }
+url = "2.4.1"

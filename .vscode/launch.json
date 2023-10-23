@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'objs'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=objs",
+                    "--package=objs"
+                ],
+                "filter": {
+                    "name": "objs",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "cp",
+                "s3://laion2b-en-vit-l14-sample-100m/lance/laion2b-sample-5m.lance/_versions/1.manifest",
+                "/tmp/foo.manifest"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'objs'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=objs",
+                    "--package=objs"
+                ],
+                "filter": {
+                    "name": "objs",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
